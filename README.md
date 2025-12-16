@@ -20,7 +20,6 @@ Oh come on, just pull the repo and click on the `index.html` file, easy peasy.
 If you REALLY want to use docker for this... you may have a serious addiction... just like me! Here's a simple `docker-compose.yml` file!
 
 ```yaml
-version: '3'
 services:
   web:
     image: nginx:alpine
