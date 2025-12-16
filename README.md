@@ -8,7 +8,10 @@ I have decided to NOT use AI in the build of this project, everything has been d
 
 Everything is as simple as it gets, it's a good old regex based scan looking for a hardcoded set of patterns that are likely to be found in AI generated code.
 
-For styling I went with good old simple css, using a mix of pastel colours, and starting off from an AMAZING CSS library I found: [oxalorg/sakura](https://github.com/oxalorg/sakura). A huge thank youh to [@oxalorg](https://github.com/oxalorg) for this incredibly pretty library.
+For styling I went with good old simple css, using a mix of pastel colours, and starting off from an AMAZING CSS library I found: [oxalorg/sakura](https://github.com/oxalorg/sakura). A huge thank you to [@oxalorg](https://github.com/oxalorg) for this incredibly pretty library.
+
+You can play around with the tool on [fccview.github.io/ackchyually-ai](https://fccview.github.io/ackchyually-ai)
+
 
 ## Want to self host?
 
@@ -29,3 +32,13 @@ services:
 
 You obviously need to pull the repo, I am NOT making a docker image for this.
 
+---
+
+<p align="center">
+  <br />
+  <i>If you are amused and/or enjoy the stuff I make...</i>
+  <br /><br />
+  <a href="https://www.buymeacoffee.com/fccview">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy me a coffee" width="120">
+  </a>
+</p>
