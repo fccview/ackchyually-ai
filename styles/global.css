@@ -37,6 +37,11 @@ ul {
     display: none !important;
 }
 
+.visitor-counter {
+    margin-bottom: 0;
+    max-width: 100px;
+}
+
 @media (min-width: 992px) {
     .flex {
         display: flex;
