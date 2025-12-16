@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ackchyually, it's AI!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/global.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="flex">Detect AI in
+            <select id="text-type" class="pointer">
+                <option value="code">Code</option>
+                <option value="readme">Readme</option>
+            </select>
+        </h1>
+        <p><strong>Please use common sense.</strong> AI is a great and useful tool for developers when used correctly.
+            This site is not meant for accusational purpose but to detect obvious non reviewed AI code for your own
+            development process and/or to verify the amount of care an open source project you are planning on self
+            hosting may have.
+        </p>
+    </div>
+    <div class="container">
+        <h2>Drop some sus <span class="text-type-value">code</span></h1>
+            <div class="editor-container">
+                <div class="line-numbers"></div>
+                <textarea id="code" class="language-generic" placeholder="Paste your code here"
+                    spellcheck="false"></textarea>
+                <pre aria-hidden="true"><code class="language-generic" id="highlighting-content"></code></pre>
+                <pre id="highlighted-result" aria-hidden="true" class="hidden"></pre>
+            </div>
+
+            <div class="flex end">
+                <button id="detect">Detect</button>
+                <button id="edit" class="hidden">Edit</button>
+            </div>
+    </div>
+
+    <div class="result-breakdown hidden">
+        <h2>Result breakdown</h2>
+
+        <div class="global-scores hidden">
+            <div>
+                <h4 class="highlight half secondary">Overall score</h4>
+                <i>This is entirely made up by ME, it's not an official metric, so please don't take it as gospel.</i>
+                <p class="ai-score-value">0%</p>
+            </div>
+        </div>
+
+        <div class="comment-ratio hidden">
+            <h4 class="highlight half secondary">Comment ratio</h4>
+            <i>The amount of comments in AI generated code is borderline ridiculous. Comments are good, too many (often
+                redundant)
+                comments are just bloat.</i>
+            <p></p>
+        </div>
+
+        <div class="emoji-ratio hidden">
+            <h4 class="highlight half warning">Emoji ratio</h4>
+            <i>AI spams emoji like there's no tomorrow.</i>
+            <p></p>
+        </div>
+
+        <div class="truncation-artifacts hidden">
+            <h4 class="highlight half danger">Lazy Truncation</h4>
+            <i>AI leaves truncations for the sake of brevity, leaving these in the code truly means that it has NOT been
+                reviewed.</i>
+            <p></p>
+            <ul></ul>
+        </div>
+
+        <div class="conversational-artifacts hidden">
+            <h4 class="highlight half danger">Conversational Artifacts</h4>
+            <i>The agent is talking to you, leaving info in the codebase.</i>
+            <p></p>
+            <ul></ul>
+        </div>
+
+        <div class="common-ai-patterns hidden">
+            <h4 class="highlight half warning">Common AI patterns</h4>
+            <i>These are some common patterns found in AI generated code.</i>
+            <p></p>
+            <ul></ul>
+        </div>
+
+        <div class="common-ai-choices hidden">
+            <h4 class="highlight half info">Common AI choices</h4>
+            <i>These are some common libraries/third party tools often chose by AI.</i>
+            <p></p>
+            <ul></ul>
+        </div>
+
+        <div class="triple-word-patterns hidden">
+            <h4 class="highlight half info">Triple Word Patterns</h4>
+            <i>AI Loves to redundantly list things, strongly following the <a
+                    href="https://en.wikipedia.org/wiki/Rule_of_three_(writing)">rule of 3</a>.</i>
+            <p></p>
+            <ul></ul>
+        </div>
+    </div>
+
+    <script src="./scripts/utils/constants.js"></script>
+    <script src="./scripts/libs/jquery.min.js"></script>
+    <script src="./scripts/libs/prism.min.js"></script>
+    <script src="./scripts/libs/prism-custom-syntax.js"></script>
+    <script src="./data/data-code.js"></script>
+    <script src="./data/data-readme.js"></script>
+    <script src="./scripts/utils/editor.js"></script>
+    <script src="./scripts/ai-detection/general.js"></script>
+    <script src="./scripts/ai-detection/code.js"></script>
+    <script src="./scripts/ai-detection/readme.js"></script>
+    <script src="./scripts/utils/results.js"></script>
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>

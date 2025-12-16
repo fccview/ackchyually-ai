@@ -1,0 +1,46 @@
+@import "libs/normalise.css";
+@import "libs/prism.css";
+@import "libs/sakura.css";
+@import "variables.css";
+@import "elements/form-elements.css";
+@import "elements/editor.css";
+@import "elements/highlights.css";
+
+i {
+    margin-bottom: 1em;
+    font-size: 12px;
+    opacity: 0.8;
+    display: block;
+}
+
+h4 {
+    display: inline;
+}
+
+ul {
+    padding: 0;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.flex {
+    display: block;
+}
+
+.flex.end {
+    justify-content: flex-end;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (min-width: 992px) {
+    .flex {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+}

@@ -1,0 +1,59 @@
+.highlighted-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.highlighted-list span.highlight {
+    display: flex;
+    max-width: fit-content;
+    align-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    margin: 0.2em 0.4em;
+}
+
+.highlight {
+    position: relative;
+    z-index: 1;
+}
+
+.highlight:before {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(1deg);
+    width: 105%;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    z-index: -1;
+}
+
+.highlight.warning:before {
+    width: 110%;
+    background-color: var(--warning-color);
+    transform: translate(-50%, -50%) rotate(-2deg);
+}
+
+.highlight.danger:before {
+    background-color: var(--danger-color);
+}
+
+.highlight.info:before {
+    background-color: var(--info-color);
+}
+
+.highlight.secondary:before {
+    background-color: var(--comment-color);
+    transform: translate(-50%, -50%) rotate(-2deg);
+}
+
+.highlight.half:before {
+    width: 30px;
+    height: 5px;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    transform: translate(0) rotate(0);
+}

@@ -1,0 +1,105 @@
+.editor-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+    border: 1px solid var(--editor-border);
+    background: var(--editor-background);
+    overflow-y: auto;
+}
+
+.editor-container textarea,
+.editor-container pre,
+.editor-container pre code,
+.line-numbers {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0 !important;
+}
+
+.editor-container pre code {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    white-space: pre !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.editor-container textarea,
+.editor-container pre {
+    margin: 0;
+    padding: 10px 10px 10px 50px !important;
+    border: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box !important;
+    overflow: auto;
+    white-space: pre;
+    tab-size: 4;
+}
+
+.editor-container pre {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.editor-container pre::-webkit-scrollbar {
+    display: none;
+}
+
+.editor-container textarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: transparent;
+    color: transparent;
+    caret-color: var(--text-color);
+    resize: none;
+    outline: none;
+    border: none !important;
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+}
+
+.editor-container textarea:focus {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.editor-container textarea::placeholder {
+    color: var(--placeholder-color);
+    -webkit-text-fill-color: var(--placeholder-color);
+}
+
+.editor-container pre {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.editor-container #highlighted-result {
+    pointer-events: auto;
+}
+
+.line-numbers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 100%;
+    background: var(--editor-background);
+    border-right: 1px solid var(--editor-border);
+    z-index: 2;
+    overflow: hidden;
+    text-align: right;
+    padding: 10px 5px 10px 0;
+    color: var(--placeholder-color);
+    box-sizing: border-box;
+    pointer-events: none;
+}
